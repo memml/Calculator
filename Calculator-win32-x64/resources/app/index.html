@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+
+        <style>
+            body {
+                margin: 0;
+                background-color: #202020;
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #display {
+                background-color: #2b2b2b;
+                color: white;
+                width: 300px;
+                padding: 20px;
+                border-radius: 15px;
+                font-size: 32px;
+                text-align: right;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+                margin: 30px auto 20px auto;
+            }
+
+            .buttons {
+                display: grid;
+                width: 300px;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            button {
+                padding: 18px;
+                font-size: 20px;
+                border: none;
+                border-radius: 10px;
+                background-color: #3a3a3a;
+                color: white;
+                cursor: pointer;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            }
+
+            #operator {
+                padding: 18px;
+                font-size: 20px;
+                border: none;
+                border-radius: 10px;
+                background-color: #555555;
+                color: white;
+                cursor: pointer;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            }
+
+            #equals {
+                padding: 18px;
+                font-size: 20px;
+                border: none;
+                border-radius: 10px;
+                background-color: #888888;
+                color: white;
+                cursor: pointer;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+                grid-column: span 2;
+            }
+
+            #clear {
+                padding: 18px;
+                font-size: 20px;
+                border: none;
+                border-radius: 10px;
+                background-color: #888888;
+                color: white;
+                cursor: pointer;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+                grid-column: span 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="display">0</div>
+
+        <div class="buttons">
+            <button onclick="press(7)">7</button>
+            <button onclick="press(8)">8</button>
+            <button onclick="press(9)">9</button>
+            <button id="operator" onclick="press('+')">+</button>
+
+            <button onclick="press(4)">4</button>
+            <button onclick="press(5)">5</button>
+            <button onclick="press(6)">6</button>
+            <button id="operator" onclick="press('-')">-</button>
+
+            <button onclick="press(1)">1</button>
+            <button onclick="press(2)">2</button>
+            <button onclick="press(3)">3</button>
+            <button id="operator" onclick="press('*')">*</button>
+
+            <button onclick="press(0)">0</button>
+            <button id="clear" onclick="clearDisplay()">C</button>
+            <button id="operator" onclick="press('/')">/</button>
+            <button id="equals" onclick="calculate()">=</button>
+
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
